@@ -2,7 +2,6 @@ package com.skalashynski.rabbitmq.consumer;
 
 import com.skalashynski.rabbitmq.MessageConfig;
 import com.skalashynski.rabbitmq.dto.OrderStatus;
-import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
