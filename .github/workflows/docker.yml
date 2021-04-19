@@ -1,0 +1,24 @@
+name: Docker Series Builds
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docler login
+        env:
+          DOCKER_USER: ${{secret.DOCKER_USER}}
+          DOCKER_PASSWORD: ${{secret.DOCKER_PASSWORD}}
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - uses: actions/checkout@v2
+      - name: Docker build
+        run: |
+          docker build ./dockerfile -t skalashynski/rabbit_mq_pet:1.0.0
