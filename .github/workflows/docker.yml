@@ -24,4 +24,4 @@ jobs:
           docker build -t skalashynski/rabbit_mq_pet:1.0.0 -f Dockerfile .
       - name: docker push
         run: |
-          docker push skalashynski/rabbit_mq_pet
+          docker push skalashynski/rabbit_mq_pet:1.0.0
