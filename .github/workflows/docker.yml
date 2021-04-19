@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Docler login
+      - name: Docker login
         env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
@@ -21,4 +21,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Docker build
         run: |
-          docker build ./dockerfile -t skalashynski/rabbit_mq_pet:1.0.0
+          docker build ./Dockerfile -t skalashynski/rabbit_mq_pet:1.0.0

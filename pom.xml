@@ -53,6 +53,7 @@
 
 
     <build>
+        <finalName>rabbit-mq-pet</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
