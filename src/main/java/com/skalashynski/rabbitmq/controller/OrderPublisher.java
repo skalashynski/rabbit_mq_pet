@@ -1,4 +1,4 @@
-package com.skalashynski.rabbitmq.publisher;
+package com.skalashynski.rabbitmq.controller;
 
 import com.skalashynski.rabbitmq.dto.Order;
 import com.skalashynski.rabbitmq.dto.OrderStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-import static com.skalashynski.rabbitmq.MessageConfig.EXCHANGE;
-import static com.skalashynski.rabbitmq.MessageConfig.ROUTING_KEY;
+import static com.skalashynski.rabbitmq.config.OrderRabbitMqConfig.EXCHANGE;
+import static com.skalashynski.rabbitmq.config.OrderRabbitMqConfig.ROUTING_KEY;
 
 @RestController
 @RequestMapping("/order")

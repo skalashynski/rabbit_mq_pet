@@ -1,4 +1,4 @@
-package com.skalashynski.rabbitmq;
+package com.skalashynski.rabbitmq.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MessageConfig {
+public class OrderRabbitMqConfig {
 
     public static final String QUEUE = "spring_rabbit_mq_queue";
     public static final String EXCHANGE = "spring_rabbit_mq_exchange";
